@@ -5,6 +5,10 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
+
+temp =  22 
+print(temp)
+
 # Load data from Excel file (replace 'filename.xlsx' with your actual file name)
 data = pd.read_excel('diabetes.xlsx')
 
