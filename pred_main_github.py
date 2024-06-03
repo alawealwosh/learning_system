@@ -9,7 +9,7 @@ current_dateTime = datetime.now()
 formatted_datetime = current_dateTime.strftime("%Y-%m-%d_%H-%M-%S")
 
 # Load dataset
-df = pd.read_excel('d_1.xlsx')
+df = pd.read_excel('numerical_diabetes_data_55423.xlsx')
 
 
 X = df.drop('Outcome', axis=1)  # Replace 'TargetColumn' with the name of your target column
@@ -43,7 +43,7 @@ print(f"Test accuracy: {accuracy*100:.2f}%")
 
 
 
-new_data = pd.read_excel('d_2.xlsx')
+new_data = pd.read_excel('numerical_diabetes_data_55423 - no outcome.xlsx')
 
 new_data_scaled = scaler.transform(new_data)
 predictions = model.predict(new_data_scaled)

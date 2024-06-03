@@ -5,12 +5,9 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-
-temp =  22 
-print(temp)
-
 # Load data from Excel file (replace 'filename.xlsx' with your actual file name)
-data = pd.read_excel('diabetes.xlsx')
+# data = pd.read_excel('diabetes.xlsx')
+data = pd.read_excel('hos_data_diabities.xlsx')
 
 # Separate features and labels
 X = data.drop(columns=['Outcome'])
@@ -38,7 +35,7 @@ model.fit(X_train, y_train, epochs=100, batch_size=10, verbose=1)
 
 # Use the model to predict outcomes for new patients
 # Load data for new patients (replace 'new_patients.xlsx' with the actual file name)
-new_data = pd.read_excel('new_patients.xlsx')
+new_data = pd.read_excel('hos_data_diabities_without_outcome.xlsx')
 
 # Preprocess the new data similarly as done before
 new_X_scaled = scaler.transform(new_data)
